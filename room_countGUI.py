@@ -34,6 +34,9 @@ def countrooms():
 	for pt in zip(*loc[::-1]): #count
 		count = count + 1
 
+	if count != 0:
+		count = count+1	
+
 	roomsleft1 = str(64 - count)
 	roomsleft2 = str(50-count)	
 
@@ -49,7 +52,8 @@ def countrooms():
 root = tk.Tk()
 root.geometry("400x22")
 root.overrideredirect(1)
-w = tk.Label(root, text='0')
+root.configure(background='black')
+w = tk.Label(root, text='0',background ='black',fg='white',font='helvetica 12')
 w.pack()
 seconds = 0
 
